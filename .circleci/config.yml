@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:14
+      - image: ubuntu:18.04
 
       - image: cr.yandex/crp3cgu5vnl52hr4ct47/playwright-backend:$CIRCLE_BRANCH
         auth:
@@ -11,6 +11,8 @@ jobs:
           password: $YA_REGISTRY_KEY
     steps:
       - checkout
+
+      - run: "sudo apt update && sudo apt install nodejs npm"
 
       - run: "npm install"
 
