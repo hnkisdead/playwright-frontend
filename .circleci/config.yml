@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/nodejs:14
+      - image: nodejs:14
       - image: cr.yandex/crp3cgu5vnl52hr4ct47/playwright-backend:$CIRCLE_BRANCH
         auth:
           username: json_key
