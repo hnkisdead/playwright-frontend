@@ -19,4 +19,7 @@ jobs:
 workflows:
   test:
     jobs:
-      - test
+      - test:
+          context:
+            - build-env-vars
+            - docker-hub-creds
