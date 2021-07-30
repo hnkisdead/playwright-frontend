@@ -5,7 +5,7 @@ const Application = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost/items/12?q=sdf")
+    fetch("http://localhost:8888/items/12?q=sdf")
       .then(response => response.json())
       .then(data => {
         setCount(data.item_id)
