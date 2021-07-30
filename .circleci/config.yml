@@ -14,9 +14,7 @@ jobs:
 
       - run: "npm install"
 
-      - run: "npm run start"
-
-      - run: "npm run test:e2e"
+      - run: "npm run ci"
 
       - store_artifacts:
           path: results.xml
