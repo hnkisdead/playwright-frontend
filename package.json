@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "test:e2e": "playwright test"
+    "test": "playwright test",
+    "ci": "server-test http://localhost:1234"
   },
   "author": "",
   "license": "ISC",
@@ -18,8 +19,8 @@
     "@playwright/test": "^1.13.1",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
-    "concurrently": "^6.2.0",
     "parcel-bundler": "^1.12.5",
+    "start-server-and-test": "^1.13.1",
     "typescript": "^4.3.5"
   }
 }
