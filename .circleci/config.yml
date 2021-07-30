@@ -5,10 +5,10 @@ jobs:
     docker:
       - image: circleci/node:14
 
-#      - image: cr.yandex/crp3cgu5vnl52hr4ct47/playwright-backend:$CIRCLE_BRANCH
-#        auth:
-#          username: json_key
-#          password: $YA_REGISTRY_KEY
+      - image: cr.yandex/crp3cgu5vnl52hr4ct47/playwright-backend:$CIRCLE_BRANCH
+        auth:
+          username: json_key
+          password: $YA_REGISTRY_KEY
     steps:
       - checkout
 
@@ -18,8 +18,3 @@ jobs:
 
       - store_artifacts:
           path: result.xml
-
-#workflows:
-#  test:
-#    jobs:
-#      - test
