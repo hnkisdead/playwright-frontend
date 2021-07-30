@@ -14,3 +14,8 @@ jobs:
       - run: "npm install"
 
       - run: "npm run test:e2e"
+
+workflows:
+  test:
+    jobs:
+      - test
