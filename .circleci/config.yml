@@ -1,9 +1,9 @@
 version: 2.1
 
 jobs:
-  test:
+  build:
     docker:
-      - image: cimg/node:14
+      - image: circleci/node:14
 
 #      - image: cr.yandex/crp3cgu5vnl52hr4ct47/playwright-backend:$CIRCLE_BRANCH
 #        auth:
@@ -16,7 +16,7 @@ jobs:
 
       - run: "npm run test:e2e"
 
-workflows:
-  test:
-    jobs:
-      - test
+#workflows:
+#  test:
+#    jobs:
+#      - test
