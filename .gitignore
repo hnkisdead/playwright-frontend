@@ -3,3 +3,6 @@ node_modules
 dist
 results.xml
 .cache
+.DS_store
+cypress/videos
+cypress/screenshots

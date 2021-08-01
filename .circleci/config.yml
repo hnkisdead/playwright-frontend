@@ -14,7 +14,9 @@ jobs:
 
       - run: "npm install"
 
-      - run: "npm run ci"
+      - run: "npm run ci:playwright"
+
+      - run: "npm run ci:cypress"
 
       - store_artifacts:
           path: results.xml

@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "test": "playwright test",
-    "ci": "server-test http://localhost:1234"
+    "start-server": "parcel src/index.html",
+    "test:playwright": "playwright test",
+    "test:cypress": "cypress run --headless",
+    "ci:playwright": "start-server-and-test start-server http://localhost:1234 test:playwright",
+    "ci:cypress": "start-server-and-test start-server http://localhost:1234 test:cypress"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "@playwright/test": "^1.13.1",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
+    "cypress": "^8.1.0",
     "parcel-bundler": "^1.12.5",
     "start-server-and-test": "^1.13.1",
     "typescript": "^4.3.5"
